@@ -24,12 +24,15 @@ window.addEventListener('load', () => {
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-links li a');
-    
     let current = "";
+    let minDist = Infinity;
+    const scrollPos = window.scrollY || window.pageYOffset;
+
     sections.forEach((section) => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - sectionHeight / 3) {
+        const dist = Math.abs(scrollPos - sectionTop);
+        if (dist < minDist) {
+            minDist = dist;
             current = section.getAttribute("id");
         }
     });

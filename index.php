@@ -28,7 +28,7 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $nomAffiché; ?> | Portfolio</title>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>!e
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -48,7 +48,7 @@ try {
 
         <ul class="nav-links">
             <li><a href="#accueil" class="active">Accueil</a></li>
-            <li><a href="#parcours">Mon Parcours</a></li>
+            <li><a href="#parcours">À propos de moi</a></li>
             <li><a href="#projets">Projets SLAM</a></li>
             <li><a href="#veille">Veille Technologique</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -67,7 +67,7 @@ try {
                     <h1>Développeur d'applications <br><span class="highlight">Passionné & Rigoureux</span></h1>
                     <p class="description">
                         Actuellement en deuxième année de <strong>BTS SIO</strong> au sein du <strong>Lycée Saint-Rémi à Amiens</strong>. 
-                        Spécialisé en option <strong>SLAM</strong>, je conçois des solutions logicielles modernes.
+                        Spécialisé en option <strong>SLAM</strong>(<strong>Services Informatiques aux Organisations</strong>), je conçois des solutions logicielles modernes.
                     </p>
                    <div class="cta-group">
     <button id="btnContact" class="cta-button">Me contacter</button>
@@ -105,27 +105,88 @@ try {
             </div>
         </section>
 
-        <div class="middle-white-section">
-            <section id="parcours" class="section-container">
-                <span class="badge">Expériences</span>
-                <h2 class="section-title">Mon Parcours</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="time">2024 - 2026</div>
-                        <h3>BTS SIO Option SLAM</h3>
-                        <p>Lycée Saint-Rémi, Amiens.</p>
+        <div class="middle-white-section" id="apropos">
+            <section id="parcours" class="section-container double-col full-page">
+                <div class="col-gauche">
+                    <h2 class="section-title">À propos de moi</h2>
+                    <p>
+                        <strong>Bienvenue sur mon portfolio&nbsp;!</strong><br><br>
+                        Je m'appelle <strong>Valentin HERNU</strong>, passionné par le développement d'applications, j'aime créer des solutions innovantes et efficaces pour répondre aux besoins des utilisateurs.<br><br>
+                        Sur ce site, vous trouverez&nbsp;:
+
+                        
+                        <ul>
+                            <li>Mon parcours scolaire et professionnel</li>
+                            <li>Mes projets réalisés</li>
+                            <li>Mon CV à télécharger</li>
+                        </ul>
+                        <br>
+                        N'hésitez pas à parcourir mes réalisations et à me contacter pour toute question ou opportunité&nbsp;!
+                        <br><br>
+                        Vous retrouverez ci-dessous mon CV 👩‍💻 :
+                        <br><br>
+                        <div class="cv-btn-wrapper">
+                            <a href="img/CV-Valentin-HERNU.png" download class="cta-button cv-download">
+                                Télécharger mon CV
+                            </a>
+                        </div>
+                    </p>
+                </div>
+                <div class="col-droite">
+                    <h2 class="section-title">Mon Parcours</h2>
+                      <div class="timeline-item bts-sio-item">
+                            <span class="timeline-dot"></span>
+                            <div class="time">2024 - 2026</div>
+                            <h3>Lycée Saint-Rémi, Amiens</h3>
+                            <p><strong>BTS SIO Option SLAM</strong><br><br>
+                        Mes différents stages : <br><br>
+                    <strong>Mai-Juin 2025 :</strong> Conseil départemental de la Somme. <br>
+                    <strong>Janvier-Février 2026 :</strong> Conseil départemental de la Somme. <br>
+                    </p>
+                        </div>
+                        <div class="timeline-item bts-sio-item">
+                            <span class="timeline-dot"></span>
+                            <div class="time">2021 - 2024</div>
+                            <h3>Lycée Saint-Rémi, Amiens</h3>
+                            <p>3 années de lycée, option Informatique à partir de la Première.<br>
+                            Obtention du <strong>Bac Technologique STMG</strong> en 2024.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time">2020</div>
+                            <h3>Collège Bois l'Eau, Bernaville</h3>
+                            <p>Obtention du <strong>Brevet des collèges</strong> avec mention <strong>Bien</strong>.</p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section id="projets" class="section-container">
-                <span class="badge">Portfolio</span>
-                <h2 class="section-title">Projets SLAM</h2>
+            <section id="projets" class="section-container full-page">
+                <h2 class="section-title">Projets 🚧</h2>
                 <div class="projects-grid">
                     <div class="project-card">
                         <h3>Projet Portfolio</h3>
                         <p>Site dynamique avec PHP/MySQL.</p>
                         <div class="tags"><span>PHP</span><span>MySQL</span></div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Galaxy Swiss Bourdin</h3>
+                        <p>
+                            Application de gestion des frais pour les visiteurs médicaux de l'entreprise Galaxy Swiss Bourdin.<br>
+                            <strong>Objectif :</strong> permettre la saisie, le suivi et la validation des notes de frais.<br>
+                            <strong>Fonctionnalités :</strong> authentification, gestion des utilisateurs, saisie des frais, workflow de validation, génération de rapports.<br>
+                            <strong>Technos :</strong> PHP, MySQL, HTML, CSS, JavaScript.
+                        </p>
+                        <div class="tags"><span>PHP</span><span>MySQL</span><span>Gestion</span></div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Amicale du Val de Somme</h3>
+                        <p>
+                            Application mobile et interface web pour la gestion des courses à pied organisées dans le département de la Somme.<br>
+                            <strong>Objectif :</strong> faciliter l'inscription, la gestion des participants et le suivi des événements.<br>
+                            <strong>Fonctionnalités :</strong> interface mobile, espace organisateur, gestion des courses, API pour synchronisation.<br>
+                            <strong>Technos :</strong> HTML, CSS, JavaScript, PHP, API REST, développement mobile.
+                        </p>
+                        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>API</span><span>Mobile</span></div>
                     </div>
                 </div>
             </section>
