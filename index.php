@@ -351,6 +351,7 @@ try {
                 <textarea placeholder="Votre message" rows="5" required></textarea>
                 <button type="submit" class="cta-button">Envoyer le message</button>
             </form>
+            
         </section>
     </main>
 

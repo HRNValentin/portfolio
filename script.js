@@ -453,3 +453,41 @@ if (btnContact) {
         document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
     });
 }
+
+document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+    e.preventDefault(); // Empêche le rechargement de la page
+
+    const btn = this.querySelector('button');
+    const originalText = btn.textContent;
+    btn.textContent = "Envoi en cours...";
+    btn.disabled = true;
+
+    // Récupération des données
+    const formData = {
+        nom: document.getElementById('nom').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+    };
+
+    // Envoi via Fetch
+    fetch('contact.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message); // Petit message de confirmation
+        if(data.status === 'success') {
+            document.getElementById('contactForm').reset();
+        }
+    })
+    .catch(error => {
+        console.error('Erreur:', error);
+        alert("Une erreur est survenue.");
+    })
+    .finally(() => {
+        btn.textContent = originalText;
+        btn.disabled = false;
+    });
+});
