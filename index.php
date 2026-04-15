@@ -49,6 +49,7 @@ try {
         <ul class="nav-links">
             <li><a href="#accueil" class="active">Accueil</a></li>
             <li><a href="#parcours">À propos de moi</a></li>
+            <li><a href="#specialisations">Spécialisations</a></li>
             <li><a href="#projets">Projets SLAM</a></li>
             <li><a href="#veille">Veille Technologique</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -160,36 +161,183 @@ try {
                 </div>
             </section>
 
-            <section id="projets" class="section-container full-page">
-                <h2 class="section-title">Projets 🚧</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <h3>Projet Portfolio</h3>
-                        <p>Site dynamique avec PHP/MySQL.</p>
-                        <div class="tags"><span>PHP</span><span>MySQL</span></div>
+            <section id="specialisations" class="section-container full-page">
+                <h2 class="section-title">Spécialisations 🎯</h2>
+                <div class="specialisations-container">
+                    <div class="specialisation-card" id="slamCard">
+                        <div class="cursor-animation-container">
+                            <div class="animated-cursor"></div>
+                            <div class="animation-text">Ma spécialité</div>
+                        </div>
+                        <div class="spec-icon">
+                            <i data-lucide="code" style="width: 40px; height: 40px;"></i>
+                        </div>
+                        <h3>SLAM</h3>
+                        <p class="spec-subtitle">Solutions Logicielles et Applications Métier</p>
+                        <div class="spec-content">
+                            <p>
+                                <strong>Qu'est-ce que SLAM ?</strong><br>
+                                SLAM est l'option spécialisée en développement d'applications logicielles. Elle forme des développeurs capables de créer des solutions informatiques complètes adaptées aux besoins spécifiques des entreprises.
+                            </p>
+                            <p>
+                                <strong>Compétences acquises :</strong>
+                            </p>
+                            <ul class="spec-list">
+                                <li>Développement d'applications (desktop, web, mobile)</li>
+                                <li>Programmation en PHP, Python, Java, C#</li>
+                                <li>Gestion de bases de données (MySQL, SQL Server)</li>
+                                <li>Conception et architecture logicielle</li>
+                                <li>Tests et débogage d'applications</li>
+                                <li>Intégration de solutions existantes</li>
+                                <li>Sécurité informatique et authentification</li>
+                            </ul>
+                            <p>
+                                <strong>Débouchés professionnels :</strong><br>
+                                Développeur full-stack, Développeur web, Développeur d'applications métier, Architecte logiciel, Consultant IT
+                            </p>
+                        </div>
                     </div>
-                    <div class="project-card">
-                        <h3>Galaxy Swiss Bourdin</h3>
-                        <p>
-                            Application de gestion des frais pour les visiteurs médicaux de l'entreprise Galaxy Swiss Bourdin.<br>
-                            <strong>Objectif :</strong> permettre la saisie, le suivi et la validation des notes de frais.<br>
-                            <strong>Fonctionnalités :</strong> authentification, gestion des utilisateurs, saisie des frais, workflow de validation, génération de rapports.<br>
-                            <strong>Technos :</strong> PHP, MySQL, HTML, CSS, JavaScript.
-                        </p>
-                        <div class="tags"><span>PHP</span><span>MySQL</span><span>Gestion</span></div>
-                    </div>
-                    <div class="project-card">
-                        <h3>Amicale du Val de Somme</h3>
-                        <p>
-                            Application mobile et interface web pour la gestion des courses à pied organisées dans le département de la Somme.<br>
-                            <strong>Objectif :</strong> faciliter l'inscription, la gestion des participants et le suivi des événements.<br>
-                            <strong>Fonctionnalités :</strong> interface mobile, espace organisateur, gestion des courses, API pour synchronisation.<br>
-                            <strong>Technos :</strong> HTML, CSS, JavaScript, PHP, API REST, développement mobile.
-                        </p>
-                        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>API</span><span>Mobile</span></div>
+
+                    <div class="specialisation-card" id="sisrCard">
+                        <div class="spec-icon">
+                            <i data-lucide="server" style="width: 40px; height: 40px;"></i>
+                        </div>
+                        <h3>SISR</h3>
+                        <p class="spec-subtitle">Solutions d'Infrastructure, Sécurité et Réseau</p>
+                        <div class="spec-content">
+                            <p>
+                                <strong>Qu'est-ce que SISR ?</strong><br>
+                                SISR est l'option spécialisée en infrastructure et sécurité informatique. Elle forme des administrateurs et techniciens capables de gérer, maintenir et sécuriser les systèmes informatiques des organisations.
+                            </p>
+                            <p>
+                                <strong>Compétences acquises :</strong>
+                            </p>
+                            <ul class="spec-list">
+                                <li>Administration de serveurs (Windows Server, Linux)</li>
+                                <li>Gestion des réseaux informatiques</li>
+                                <li>Virtualisation et cloud computing (Azure, AWS)</li>
+                                <li>Sécurité informatique et pare-feu</li>
+                                <li>Installation et maintenance des infrastructures</li>
+                                <li>Support utilisateur et help-desk</li>
+                                <li>Backup et récupération de données</li>
+                                <li>Active Directory et gestion des identités</li>
+                            </ul>
+                            <p>
+                                <strong>Débouchés professionnels :</strong><br>
+                                Administrateur réseau, Administrateur système, Technicien infrastructure, Responsable sécurité, Ingénieur DevOps
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
+
+            <section id="projets" class="section-container full-page">
+                <h2 class="section-title">Projets 🚧</h2>
+                <div class="projects-grid">
+                    <div class="project-card" data-project-id="0">
+                        <div class="project-card-image">
+                            <img src="img/dev-illustre.png" alt="Portfolio">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Projet Portfolio</h3>
+                            <p class="project-tagline">Votre identité numérique en un clic</p>
+                            <p>Site dynamique avec PHP/MySQL.</p>
+                            <div class="tags"><span>PHP</span><span>MySQL</span></div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project-id="1">
+                        <div class="project-card-image">
+                            <img src="img/dev-illustre.png" alt="Galaxy Swiss Bourdin">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Galaxy Swiss Bourdin</h3>
+                            <p class="project-tagline">Simplifiez vos notes de frais</p>
+                            <p>Application de gestion des frais pour les visiteurs médicaux.</p>
+                            <div class="tags"><span>PHP</span><span>MySQL</span><span>Gestion</span></div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project-id="2">
+                        <div class="project-card-image">
+                            <img src="img/dev-illustre.png" alt="Amicale du Val de Somme">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Amicale du Val de Somme</h3>
+                            <p class="project-tagline">Coureurs réunis, victoires célébrées</p>
+                            <p>Application mobile et interface web pour la gestion des courses à pied.</p>
+                            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>API</span><span>Mobile</span></div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project-id="3">
+                        <div class="project-card-image">
+                            <img src="img/dev-illustre.png" alt="Moodle">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Moodle</h3>
+                            <p class="project-tagline">L'apprentissage, partout et toujours</p>
+                            <p>Plateforme d'apprentissage en ligne complète pour l'enseignement à distance.</p>
+                            <div class="tags"><span>PHP</span><span>MySQL</span><span>LMS</span><span>E-learning</span></div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project-id="4">
+                        <div class="project-card-image">
+                            <img src="img/dev-illustre.png" alt="Jackobylette">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Jackobylette</h3>
+                            <p class="project-tagline">La liberté sur deux roues</p>
+                            <p>Plateforme de location de mobylettes avec réservations et paiements sécurisés.</p>
+                            <div class="tags"><span>PHP</span><span>MySQL</span><span>Paiement</span><span>Réservation</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MODAL PROJETS -->
+            <div id="projectModal" class="project-modal">
+                <div class="project-modal-content">
+                    <!-- Bouton Fermer -->
+                    <button class="modal-close" id="modalClose">
+                        <i data-lucide="x" style="width: 28px; height: 28px;"></i>
+                    </button>
+
+                    <!-- Navigation Flèches -->
+                    <button class="modal-nav prev" id="modalPrev">
+                        <i data-lucide="chevron-left" style="width: 24px; height: 24px;"></i>
+                    </button>
+                    <button class="modal-nav next" id="modalNext">
+                        <i data-lucide="chevron-right" style="width: 24px; height: 24px;"></i>
+                    </button>
+
+                    <!-- Contenu du Projet -->
+                    <div class="modal-project-body">
+                        <div class="modal-images">
+                            <img id="modalProjectImage" src="" alt="Projet" class="modal-main-image">
+                            <div class="modal-thumbnails" id="modalThumbnails"></div>
+                        </div>
+                        <div class="modal-info">
+                            <h2 id="modalProjectTitle"></h2>
+                            <p id="modalProjectDesc"></p>
+                            <div id="modalProjectDetails"></div>
+                            <div id="modalProjectTags" class="tags"></div>
+                        </div>
+                    </div>
+
+                    <!-- Indicateur de Projet -->
+                    <div class="modal-indicator">
+                        <span id="modalProjectCount"></span>
+                    </div>
+
+                    <!-- Section Screenshots / Code -->
+                    <div class="modal-screenshots-section">
+                        <h3>📋 Aperçu du Code & Base de Données</h3>
+                        <div class="screenshots-tabs" id="screenshotsTabs"></div>
+                        <div class="screenshots-gallery">
+                            <img id="modalScreenshotImage" src="" alt="Screenshot" class="modal-screenshot">
+                            <div class="screenshots-sub-thumbnails" id="screenshotsSubThumbnails"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <section id="contact" class="section-container full-page">
