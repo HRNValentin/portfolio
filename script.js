@@ -454,40 +454,40 @@ if (btnContact) {
     });
 }
 
-document.getElementById('contactForm')?.addEventListener('submit', function(e) {
-    e.preventDefault(); // Empêche le rechargement de la page
+// ===== GESTION DE LA MODALE CV =====
+const viewCvBtn = document.getElementById('viewCvBtn');
+const closeCvModalBtn = document.getElementById('closeCvModal');
+const cvModal = document.getElementById('cvModal');
 
-    const btn = this.querySelector('button');
-    const originalText = btn.textContent;
-    btn.textContent = "Envoi en cours...";
-    btn.disabled = true;
-
-    // Récupération des données
-    const formData = {
-        nom: document.getElementById('nom').value,
-        email: document.getElementById('email').value,
-        message: document.getElementById('message').value
-    };
-
-    // Envoi via Fetch
-    fetch('contact.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        alert(data.message); // Petit message de confirmation
-        if(data.status === 'success') {
-            document.getElementById('contactForm').reset();
-        }
-    })
-    .catch(error => {
-        console.error('Erreur:', error);
-        alert("Une erreur est survenue.");
-    })
-    .finally(() => {
-        btn.textContent = originalText;
-        btn.disabled = false;
+if (viewCvBtn) {
+    viewCvBtn.addEventListener('click', () => {
+        cvModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
     });
+}
+
+if (closeCvModalBtn) {
+    closeCvModalBtn.addEventListener('click', () => {
+        cvModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    });
+}
+
+// Fermer la modale en cliquant en dehors du contenu
+if (cvModal) {
+    cvModal.addEventListener('click', (e) => {
+        if (e.target === cvModal) {
+            cvModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
+
+// Fermer la modale avec la touche Échap
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && cvModal.classList.contains('active')) {
+        cvModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
 });
+

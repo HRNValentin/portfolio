@@ -28,9 +28,10 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $nomAffiché; ?> | Portfolio</title>
-    <script src="https://unpkg.com/lucide@latest"></script>!e
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</body>
 </head>
 <body> 
    
@@ -91,7 +92,7 @@ try {
                         <img src="img/dev-illustre.png" alt="Développement" class="dev-img">
                         
                         <div class="skills-card">
-                            <div class="skills-header">📊 Mes Compétences</div>
+                            <div class="skills-header">📊 Piles technologiques</div>
                             <div class="skills-list">
                                 <?php foreach($competences as $c): ?>
                                     <span class="skill-tag" style="border-color: <?php echo $c['couleur']; ?>;">
@@ -127,35 +128,58 @@ try {
                         Vous retrouverez ci-dessous mon CV 👩‍💻 :
                         <br><br>
                         <div class="cv-btn-wrapper">
-                            <a href="img/CV-Valentin-HERNU.png" download class="cta-button cv-download">
-                                Télécharger mon CV
-                            </a>
+                            <button id="viewCvBtn" class="cta-button cv-download">
+                                <i data-lucide="eye" style="width: 18px; height: 18px;"></i>
+                                Visualiser mon CV
+                            </button>
                         </div>
                     </p>
                 </div>
                 <div class="col-droite">
                     <h2 class="section-title">Mon Parcours</h2>
-                      <div class="timeline-item bts-sio-item">
-                            <span class="timeline-dot"></span>
-                            <div class="time">2024 - 2026</div>
-                            <h3>Lycée Saint-Rémi, Amiens</h3>
-                            <p><strong>BTS SIO Option SLAM</strong><br><br>
-                        Mes différents stages : <br><br>
-                    <strong>Mai-Juin 2025 :</strong> Conseil départemental de la Somme. <br>
-                    <strong>Janvier-Février 2026 :</strong> Conseil départemental de la Somme. <br>
-                    </p>
+                    <div class="modern-timeline">
+                        <div class="timeline-item-modern timeline-left">
+                            <div class="timeline-content">
+                                <h3>Lycée Saint-Rémi</h3>
+                                <p class="timeline-date">2024 - 2026</p>
+                                <p class="timeline-label"><strong>BTS SIO Option SLAM</strong></p>
+                                <p><strong>Stages :</strong><br>
+                                Mai-Juin 2025 : Conseil départemental<br>
+                                Janvier-Février 2026 : Conseil départemental</p>
+                            </div>
+                            <div class="timeline-marker">
+                                <div class="timeline-icon">
+                                    <i data-lucide="book-open" style="width: 24px; height: 24px;"></i>
+                                </div>
+                            </div>
                         </div>
-                        <div class="timeline-item bts-sio-item">
-                            <span class="timeline-dot"></span>
-                            <div class="time">2021 - 2024</div>
-                            <h3>Lycée Saint-Rémi, Amiens</h3>
-                            <p>3 années de lycée, option Informatique à partir de la Première.<br>
-                            Obtention du <strong>Bac Technologique STMG</strong> en 2024.</p>
+
+                        <div class="timeline-item-modern timeline-right">
+                            <div class="timeline-marker">
+                                <div class="timeline-icon">
+                                    <i data-lucide="award" style="width: 24px; height: 24px;"></i>
+                                </div>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Lycée Saint-Rémi</h3>
+                                <p class="timeline-date">2021 - 2024</p>
+                                <p class="timeline-label"><strong>Bac Technologique STMG</strong></p>
+                                <p>3 années de lycée avec option Informatique à partir de la Première.</p>
+                            </div>
                         </div>
-                        <div class="timeline-item">
-                            <div class="time">2020</div>
-                            <h3>Collège Bois l'Eau, Bernaville</h3>
-                            <p>Obtention du <strong>Brevet des collèges</strong> avec mention <strong>Bien</strong>.</p>
+
+                        <div class="timeline-item-modern timeline-left">
+                            <div class="timeline-content">
+                                <h3>Collège Bois l'Eau</h3>
+                                <p class="timeline-date">2020</p>
+                                <p class="timeline-label"><strong>Brevet des collèges</strong></p>
+                                <p>Obtention avec mention <strong>Bien</strong>.</p>
+                            </div>
+                            <div class="timeline-marker">
+                                <div class="timeline-icon">
+                                    <i data-lucide="zap" style="width: 24px; height: 24px;"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -342,18 +366,63 @@ try {
 
         <section id="contact" class="section-container full-page">
             <span class="badge">Contact</span>
-            <h2 class="section-title">Me joindre</h2>
-            <form class="contact-form">
-                <div class="input-group">
-                    <input type="text" placeholder="Nom" required>
-                    <input type="email" placeholder="Email" required>
-                </div>
-                <textarea placeholder="Votre message" rows="5" required></textarea>
-                <button type="submit" class="cta-button">Envoyer le message</button>
-            </form>
+            <h2 class="section-title">Me contacter</h2>
             
+            <div class="contact-content">
+                <!-- Email et Réseaux Sociaux -->
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-card-header">
+                            <i data-lucide="mail" style="color: var(--accent-color); width: 28px; height: 28px;"></i>
+                            <h3>Email</h3>
+                        </div>
+                        <p class="contact-email">
+                            <a href="mailto:valentinhernu1@gmail.com">valentinhernu1@gmail.com</a>
+                        </p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-card-header">
+                            <i data-lucide="map-pin" style="color: var(--accent-color); width: 28px; height: 28px;"></i>
+                            <h3>Localisation</h3>
+                        </div>
+                        <p class="contact-location">Amiens, France</p>
+                    </div>
+                </div>
+                
+                <!-- Carte Google Maps -->
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2609.4893939999998!2d2.2945!3d49.8841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6f0a5f0a5f0a5%3A0x0!2sAmiens%2C%20France!5e0!3m2!1sfr!2sfr!4v1000000000000" width="100%" height="400" style="border:0; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                
+                <!-- Liens Sociaux -->
+                <div class="social-links">
+                    <a href="https://github.com/HRNValentin" target="_blank" rel="noopener noreferrer" class="social-link github">
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://linkedin.com/in/valentinhernu" target="_blank" rel="noopener noreferrer" class="social-link linkedin">
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
         </section>
     </main>
+
+    <!-- Modale CV -->
+    <div id="cvModal" class="cv-modal">
+        <div class="cv-modal-content">
+            <button id="closeCvModal" class="cv-modal-close">
+                <i data-lucide="x" style="width: 24px; height: 24px;"></i>
+            </button>
+            
+            <img id="cvImage" src="img/CV-Valentin-Hernu-2025.png" alt="CV" class="cv-modal-image">
+            
+            <a id="downloadCvBtn" href="img/CV-Valentin-Hernu-2025.png" download class="cv-download-modal">
+                <i data-lucide="download" style="width: 18px; height: 18px;"></i>
+                Télécharger le CV
+            </a>
+        </div>
+    </div>
 
     <script src="script.js"></script>
     <script>lucide.createIcons();</script>
