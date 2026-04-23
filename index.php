@@ -364,6 +364,218 @@ try {
             </div>
         </div>
 
+        <section id="veille" class="section-container full-page">
+            <span class="badge">Veille Technologique</span>
+            <h2 class="section-title">L'Ère du Vibe Coding 🤖</h2>
+            <p class="veille-intro-text">Le développement assisté par Agent IA : Evolution ou révolution du métier ?</p>
+
+            <!-- Timeline: Passé, Présent, Futur -->
+            <div class="veille-section">
+                <h3>📅 L'Évolution du Code</h3>
+                <div class="timeline-periods">
+                    <div class="timeline-period">
+                        <div class="period-icon">🕰️</div>
+                        <h4>Le Passé (1950-2015)</h4>
+                        <p>Codage entièrement manuel. Stack Overflow (2008) révolutionne l'entraide. IDE simples, pas d'outils intelligents.</p>
+                    </div>
+                    <div class="timeline-period">
+                        <div class="period-icon">⚡</div>
+                        <h4>Le Présent (2016-2026)</h4>
+                        <p>GitHub Copilot (2021) → ChatGPT (2022) → Agents IA multimodaux. Pair programming avec l'IA devient norme. Réduction du temps de dev : 30-50%.</p>
+                    </div>
+                    <div class="timeline-period">
+                        <div class="period-icon">🚀</div>
+                        <h4>Le Futur (2026+)</h4>
+                        <p>Agents IA autonomes créant des apps complètes. Déploiement et sécurité automatisés. Métiers en évolution : architects IA plutôt que codeurs purs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Avis Pour vs Contre -->
+            <div class="veille-section">
+                <h3>⚖️ Pour vs Contre</h3>
+                <div class="avis-container">
+                    <div class="avis-card pour">
+                        <h4>✅ L'Avis POUR</h4>
+                        <p><strong>"L'IA amplifie, elle ne remplace pas"</strong></p>
+                        <ul>
+                            <li>Productivité accrue de 2-3x</li>
+                            <li>Démocratisation : les débutants créent des apps complexes</li>
+                            <li>Réduction des bugs via tests automatisés</li>
+                            <li>Créativité libérée des tâches répétitives</li>
+                            <li>Nouveaux rôles émergents : Prompt Engineer, IA Architect</li>
+                        </ul>
+                    </div>
+                    <div class="avis-card contre">
+                        <h4>⚠️ L'Avis CONTRE</h4>
+                        <p><strong>"Dépendance et perte de compétences"</strong></p>
+                        <ul>
+                            <li>Perte de compétences fondamentales</li>
+                            <li>Code généré sans rigueur architecturale</li>
+                            <li>Vulnérabilités de sécurité potentielles</li>
+                            <li>Réduction drastique des postes juniors</li>
+                            <li>Hallucinations IA créant du code non-fonctionnel</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vidéos Importantes -->
+            <div class="veille-section">
+                <h3>🎬 Vidéos Clés</h3>
+                <div class="videos-grid">
+                    <div class="video-card">
+                        <iframe width="100%" height="180" src="https://www.youtube.com/embed/T7n23rqzYXI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <h4>GitHub Copilot Workspace</h4>
+                        <p>Fireship</p>
+                    </div>
+                    <div class="video-card">
+                        <iframe width="100%" height="180" src="https://www.youtube.com/embed/j9VU4G_bKCk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <h4>Devin: Ingénieur IA</h4>
+                        <p>Traversy Media</p>
+                    </div>
+                    <div class="video-card">
+                        <iframe width="100%" height="180" src="https://www.youtube.com/embed/n7xfyJKWl5U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <h4>Cursor: AI VS Code</h4>
+                        <p>Web Dev Simplified</p>
+                    </div>
+                    <div class="video-card">
+                        <iframe width="100%" height="180" src="https://www.youtube.com/embed/qjvQtIFMyTg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <h4>L'IA ne remplacera pas les devs</h4>
+                        <p>Code Report</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Créateurs à Suivre -->
+            <div class="veille-section">
+                <h3>👥 Créateurs & Youtubeurs (Je suis abonné ✓)</h3>
+                <div class="creators-grid">
+                    <div class="creator-card">
+                        <h4>Fireship</h4>
+                        <p>Explications visuelles concises sur la tech et l'IA</p>
+                        <a href="https://www.youtube.com/@fireship" target="_blank">→ Chaîne</a>
+                    </div>
+                    <div class="creator-card">
+                        <h4>Traversy Media</h4>
+                        <p>Tutoriels web et intégration de l'IA en dev</p>
+                        <a href="https://www.youtube.com/@traversymedia" target="_blank">→ Chaîne</a>
+                    </div>
+                    <div class="creator-card">
+                        <h4>Theo - t3.gg</h4>
+                        <p>Analyses sur agents IA et futur du web dev</p>
+                        <a href="https://www.youtube.com/@t3dotgg" target="_blank">→ Chaîne</a>
+                    </div>
+                    <div class="creator-card">
+                        <h4>Web Dev Simplified</h4>
+                        <p>Tutoriels sur les outils de dev modernes</p>
+                        <a href="https://www.youtube.com/@WebDevSimplified" target="_blank">→ Chaîne</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ressources Essentielles -->
+            <div class="veille-section">
+                <h3>📚 Ressources Essentielles</h3>
+                <div class="resources-grid">
+                    <div class="resource-category">
+                        <h4>🔗 Blogs & Articles</h4>
+                        <ul>
+                            <li><a href="https://github.blog" target="_blank">GitHub Blog</a> - Copilot & IA en dev</li>
+                            <li><a href="https://openai.com/research" target="_blank">OpenAI Research</a> - Recherches officielles</li>
+                            <li><a href="https://dev.to" target="_blank">DEV.to</a> - Communauté dev</li>
+                            <li><a href="https://huggingface.co/blog" target="_blank">Hugging Face</a> - IA open-source</li>
+                        </ul>
+                    </div>
+                    <div class="resource-category">
+                        <h4>📖 Livres Recommandés</h4>
+                        <ul>
+                            <li><strong>Superintelligence</strong> - Nick Bostrom (2014)</li>
+                            <li><strong>Deep Learning</strong> - Goodfellow et al. (2016)</li>
+                            <li><strong>The Alignment Problem</strong> - Brian Christian (2020)</li>
+                            <li><strong>Clean Code</strong> - Robert C. Martin (2008)</li>
+                        </ul>
+                    </div>
+                    <div class="resource-category">
+                        <h4>📧 Newsletters</h4>
+                        <ul>
+                            <li><a href="https://newsletter.deeplearning.ai/" target="_blank">DeepLearning.AI</a> - IA & ML</li>
+                            <li><a href="https://importai.substack.com" target="_blank">Import AI</a> - Digest IA générative</li>
+                            <li><a href="https://tldr.tech" target="_blank">TLDR Tech</a> - Tech quotidienne</li>
+                            <li><a href="https://aiweekly.co" target="_blank">AI Weekly</a> - News curatées</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conclusion -->
+            <div class="veille-conclusion">
+                <h3>💡 Mon Avis</h3>
+                <p>
+                    Le "Vibe Coding" est une <strong>évolution</strong>, pas une menace. L'IA est mon outil, pas mon remplaçant. 
+                    L'important : rester curieux, maintenir mes fondamentaux techniques, et apprendre à collaborer efficacement avec les agents IA. 
+                    Ceux qui embrassent cette ère et restent rigoureux seront les leaders de demain.
+                </p>
+            </div>
+        </section>
+
+
+                <!-- Chronologie : Passé, Présent, Futur -->
+                <div class="timeline-section">
+                    <h3 class="veille-subtitle-h3">📅 Évolution du code assisté par IA</h3>
+                    
+                    <div class="veille-timeline">
+                        <div class="veille-timeline-item past">
+                            <div class="veille-timeline-marker">
+                                <span class="veille-timeline-icon">🕰️</span>
+                            </div>
+                            <div class="veille-timeline-content">
+                                <h4>Le Passé (Avant 2023)</h4>
+                                <p><strong>L'ère du développement manuel :</strong></p>
+                                <ul>
+                                    <li>Google Autocomplete et IntelliSense basiques</li>
+                                    <li>Premiers assistants de code (Tabnine, Kite)</li>
+                                    <li>Stack Overflow et les forums comme única ressource</li>
+                                    <li>Le développeur = la principale "IA" du projet</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="veille-timeline-item present">
+                            <div class="veille-timeline-marker">
+                                <span class="veille-timeline-icon">⚡</span>
+                            </div>
+                            <div class="veille-timeline-content">
+                                <h4>Le Présent (2023-2026)</h4>
+                                <p><strong>La révolution des LLM :</strong></p>
+                                <ul>
+                                    <li>ChatGPT, Claude, GitHub Copilot X génèrent des blocs complets</li>
+                                    <li>Agents IA semi-autonomes (Cursor, Devin)</li>
+                                    <li>Capacité à refactoriser, déboguer et tester automatiquement</li>
+                                    <li>Premières expériences de "pair programming IA"</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="veille-timeline-item future">
+                            <div class="veille-timeline-marker">
+                                <span class="veille-timeline-icon">🚀</span>
+                            </div>
+                            <div class="veille-timeline-content">
+                                <h4>Le Futur (2026+)</h4>
+                                <p><strong>La maturation des agents autonomes :</strong></p>
+                                <ul>
+                                    <li>Agents IA complètement autonomes pour projets complets</li>
+                                    <li>Zéro tâche manuelle, juste des spécifications</li>
+                                    <li>Intégration totale avec DevOps, test, déploiement</li>
+                                    <li>Le rôle du dev : architecte et validateur, pas codeur</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
         <section id="contact" class="section-container full-page">
             <span class="badge">Contact</span>
             <h2 class="section-title">Me contacter</h2>
