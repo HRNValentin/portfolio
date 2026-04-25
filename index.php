@@ -41,6 +41,13 @@ try {
     </div>   
      
     <nav class="sidebar">
+        <!-- Bouton hamburger pour mobile -->
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <div class="profile-section">
             <img src="img/<?php echo $photoAffichée; ?>?t=<?php echo time(); ?>" alt="Profil" class="profile-img">
             <h2><?php echo $nomAffiché; ?></h2>
@@ -75,12 +82,12 @@ try {
     <button id="btnContact" class="cta-button">Me contacter</button>
     
     <?php if (isset($_SESSION['admin_connecte'])): ?>
-        <div style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
-            <a href="admin.php" style="color: var(--accent-color); text-decoration: none; font-size: 0.9rem;">
-                <i data-lucide="settings" style="width:16px; height:16px; vertical-align:middle;"></i> Admin
+                   <div class="admin-section">
+            <a href="admin.php" class="admin-link">
+                <i data-lucide="settings" class="icon-sm"></i> Admin
             </a>
-            <a href="logout.php" style="color: #ef4444; text-decoration: none; font-size: 0.9rem; border-left: 1px solid #334155; padding-left: 15px;">
-                <i data-lucide="log-out" style="width:16px; height:16px; vertical-align:middle;"></i> Déconnexion
+            <a href="logout.php" class="logout-link">
+                <i data-lucide="log-out" class="icon-sm"></i> Déconnexion
             </a>
         </div>
     <?php endif; ?>
@@ -153,6 +160,17 @@ try {
                                 </div>
                             </div>
                         </div>
+                        <!-- Boutons rapports de stage -->
+                    <div class="stages-buttons">
+                        <a href="https://www.canva.com" target="_blank" class="stage-btn stage-2025">
+                            <i data-lucide="file-text" style="width: 18px; height: 18px;"></i>
+                            Rapport Stage 2025
+                        </a>
+                        <a href="https://www.canva.com" target="_blank" class="stage-btn stage-2026">
+                            <i data-lucide="file-text" style="width: 18px; height: 18px;"></i>
+                            Rapport Stage 2026
+                        </a>
+                    </div>
 
                         <div class="timeline-item-modern timeline-right">
                             <div class="timeline-marker">
@@ -369,7 +387,7 @@ try {
             <h2 class="section-title">L'Ère du Vibe Coding 🤖</h2>
             <p class="veille-intro-text">Le développement assisté par Agent IA : Evolution ou révolution du métier ?</p>
 
-            <!-- Timeline: Passé, Présent, Futur -->
+            <!-- ===== SECTION 1 : ÉVOLUTION DU CODE ===== -->
             <div class="veille-section">
                 <h3>📅 L'Évolution du Code</h3>
                 <div class="timeline-periods">
@@ -391,7 +409,69 @@ try {
                 </div>
             </div>
 
-            <!-- Avis Pour vs Contre -->
+            <!-- ===== SECTION 2 : QU'EST-CE QUE LE VIBE CODING ? ===== -->
+            <div class="veille-section">
+                <h3>✨ Qu'est-ce que le "Vibe Coding" ?</h3>
+                <p>
+                    Le <strong>"Vibe Coding"</strong> est une philosophie de développement où le développeur collabore étroitement avec des agents IA.<br>
+                    Ce n'est plus du codage traditionnel, c'est du <strong>codage conversationnel et itératif</strong>.
+                </p>
+                <div class="concept-box">
+                    <p><strong>🎯 Le Concept :</strong></p>
+                    <ul class="concept-list">
+                        <li><strong>L'IA propose</strong> des solutions en temps réel</li>
+                        <li><strong>Le dev valide</strong> et affine les résultats</li>
+                        <li><strong>La boucle itère</strong> rapidement jusqu'au résultat parfait</li>
+                        <li>Moins de temps sur le syntaxe, plus sur la logique et l'architecture</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ===== SECTION 3 : STATISTIQUES & CHIFFRES ===== -->
+            <div class="veille-section">
+                <h3>📊 Chiffres & Statistiques (2025-2026)</h3>
+                <div class="stats-grid">
+                    <div class="stat-card stat-card-purple">
+                        <div class="stat-value">92%</div>
+                        <p class="stat-label">des devs utilisent une forme d'IA</p>
+                    </div>
+                    <div class="stat-card stat-card-pink">
+                        <div class="stat-value">45%</div>
+                        <p class="stat-label">gain de productivité moyen</p>
+                    </div>
+                    <div class="stat-card stat-card-blue">
+                        <div class="stat-value">3X</div>
+                        <p class="stat-label">code généré plus rapidement</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== SECTION 4 : OUTILS ESSENTIELS ===== -->
+            <div class="veille-section">
+                <h3>🛠️ Les Outils du Vibe Coding</h3>
+                <div class="tools-grid">
+                    <div class="tool-box tool-box-blue">
+                        <h4>IDE & Éditeurs</h4>
+                        <ul>
+                            <li><strong>GitHub Copilot</strong> - Le standard dans VS Code</li>
+                            <li><strong>Cursor</strong> - Fork de VS Code 100% IA</li>
+                            <li><strong>JetBrains AI</strong> - IA intégrée aux IDE JetBrains</li>
+                            <li><strong>Claude for Cline</strong> - Agent autonome dans l'éditeur</li>
+                        </ul>
+                    </div>
+                    <div class="tool-box tool-box-red">
+                        <h4>Agents Autonomes</h4>
+                        <ul>
+                            <li><strong>Devin</strong> - Ingénieur IA complet</li>
+                            <li><strong>Replit Agent</strong> - Développement depuis les specs</li>
+                            <li><strong>GPT-4 Project Planner</strong> - Planification automatique</li>
+                            <li><strong>Grok-2</strong> - Raisonnement complexe en code</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== SECTION 5 : POUR VS CONTRE ===== -->
             <div class="veille-section">
                 <h3>⚖️ Pour vs Contre</h3>
                 <div class="avis-container">
@@ -404,6 +484,9 @@ try {
                             <li>Réduction des bugs via tests automatisés</li>
                             <li>Créativité libérée des tâches répétitives</li>
                             <li>Nouveaux rôles émergents : Prompt Engineer, IA Architect</li>
+                            <li>Apprentissage accéléré via exemples et patterns générés</li>
+                            <li>Meilleure documentation automatique du code</li>
+                            <li>Collaboration humain-machine plus naturelle et efficace</li>
                         </ul>
                     </div>
                     <div class="avis-card contre">
@@ -415,42 +498,38 @@ try {
                             <li>Vulnérabilités de sécurité potentielles</li>
                             <li>Réduction drastique des postes juniors</li>
                             <li>Hallucinations IA créant du code non-fonctionnel</li>
+                            <li>Manque de traçabilité et de responsabilité du code</li>
+                            <li>Dépendance envers les fournisseurs (OpenAI, etc.)</li>
+                            <li>Problèmes de propriété intellectuelle et plagiat</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Vidéos Importantes -->
+            <!-- ===== SECTION 6 : VIDÉOS CLÉS (SANS LIENS) ===== -->
             <div class="veille-section">
-                <h3>🎬 Vidéos Clés</h3>
-                <div class="videos-grid">
-                    <div class="video-card">
-                        <iframe width="100%" height="180" src="https://www.youtube.com/embed/T7n23rqzYXI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <h4>GitHub Copilot Workspace</h4>
-                        <p>Fireship</p>
-                    </div>
-                    <div class="video-card">
-                        <iframe width="100%" height="180" src="https://www.youtube.com/embed/j9VU4G_bKCk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <h4>Devin: Ingénieur IA</h4>
-                        <p>Traversy Media</p>
-                    </div>
-                    <div class="video-card">
-                        <iframe width="100%" height="180" src="https://www.youtube.com/embed/n7xfyJKWl5U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <h4>Cursor: AI VS Code</h4>
-                        <p>Web Dev Simplified</p>
-                    </div>
-                    <div class="video-card">
-                        <iframe width="100%" height="180" src="https://www.youtube.com/embed/qjvQtIFMyTg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <h4>L'IA ne remplacera pas les devs</h4>
-                        <p>Code Report</p>
-                    </div>
+                <h3>🎬 Vidéos Clés à Regarder</h3>
+                <div class="videos-box">
+                    <h4>Ressources Internationales :</h4>
+                    <ul>
+                        <li>GitHub Copilot Workspace - Fireship</li>
+                        <li>Devin: Ingénieur IA - Traversy Media</li>
+                        <li>Cursor: AI VS Code - Web Dev Simplified</li>
+                        <li>L'IA ne remplacera pas les devs - Code Report</li>
+                    </ul>
+                    <h4 style="margin-top: 20px;">Ressources en Français :</h4>
+                    <ul>
+                        <li>Grafikart - Tutoriels web et dev modernes en français avec focus IA</li>
+                        <li>Node Genius Team - Analyses et tendances technologiques pour développeurs français</li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Créateurs à Suivre -->
+            <!-- ===== SECTION 7 : CRÉATEURS À SUIVRE ===== -->
             <div class="veille-section">
-                <h3>👥 Créateurs & Youtubeurs (Je suis abonné ✓)</h3>
+                <h3>👥 Créateurs & Youtubeurs à Suivre</h3>
                 <div class="creators-grid">
+                    <h4 class="creators-header">🌐 Chaînes Internationales :</h4>
                     <div class="creator-card">
                         <h4>Fireship</h4>
                         <p>Explications visuelles concises sur la tech et l'IA</p>
@@ -471,20 +550,40 @@ try {
                         <p>Tutoriels sur les outils de dev modernes</p>
                         <a href="https://www.youtube.com/@WebDevSimplified" target="_blank">→ Chaîne</a>
                     </div>
+                    <h4 class="creators-header-international">🇷🇟 Créateurs Français :</h4>
+                    <div class="creator-card">
+                        <h4>Grafikart</h4>
+                        <p>Tutoriels complets sur web, dev et technologies modernes</p>
+                        <a href="https://www.youtube.com/@Grafikart" target="_blank">→ Chaîne</a>
+                    </div>
+                    <div class="creator-card">
+                        <h4>Tech Me Out</h4>
+                        <p>Analyses et tendances tech, IA et startups françaises</p>
+                        <a href="https://www.youtube.com/@TechMeOut" target="_blank">→ Chaîne</a>
+                    </div>
                 </div>
             </div>
 
-            <!-- Ressources Essentielles -->
+            <!-- ===== SECTION 8 : RESSOURCES ESSENTIELLES ===== -->
             <div class="veille-section">
                 <h3>📚 Ressources Essentielles</h3>
                 <div class="resources-grid">
                     <div class="resource-category">
-                        <h4>🔗 Blogs & Articles</h4>
+                        <h4>🔗 Blogs & Articles Internationaux</h4>
                         <ul>
                             <li><a href="https://github.blog" target="_blank">GitHub Blog</a> - Copilot & IA en dev</li>
                             <li><a href="https://openai.com/research" target="_blank">OpenAI Research</a> - Recherches officielles</li>
                             <li><a href="https://dev.to" target="_blank">DEV.to</a> - Communauté dev</li>
                             <li><a href="https://huggingface.co/blog" target="_blank">Hugging Face</a> - IA open-source</li>
+                        </ul>
+                    </div>
+                    <div class="resource-category">
+                        <h4>🇫🇷 Blogs & Articles Français</h4>
+                        <ul>
+                            <li><a href="https://www.grafikart.fr" target="_blank">Grafikart.fr</a> - Tutoriels et ressources dev françaises</li>
+                            <li><a href="https://www.minimachines.net" target="_blank">Minimachines</a> - Actualité tech et gadgets</li>
+                            <li><a href="https://www.01net.com" target="_blank">01net</a> - News et analyses technologiques</li>
+                            <li><a href="https://www.lemagit.fr" target="_blank">Le Mag IT</a> - IT et infrastructure</li>
                         </ul>
                     </div>
                     <div class="resource-category">
@@ -494,10 +593,11 @@ try {
                             <li><strong>Deep Learning</strong> - Goodfellow et al. (2016)</li>
                             <li><strong>The Alignment Problem</strong> - Brian Christian (2020)</li>
                             <li><strong>Clean Code</strong> - Robert C. Martin (2008)</li>
+                            <li><strong>L'Homme Cognition et IA</strong> - Robert Lully</li>
                         </ul>
                     </div>
                     <div class="resource-category">
-                        <h4>📧 Newsletters</h4>
+                        <h4>📧 Newsletters Internationales</h4>
                         <ul>
                             <li><a href="https://newsletter.deeplearning.ai/" target="_blank">DeepLearning.AI</a> - IA & ML</li>
                             <li><a href="https://importai.substack.com" target="_blank">Import AI</a> - Digest IA générative</li>
@@ -505,50 +605,174 @@ try {
                             <li><a href="https://aiweekly.co" target="_blank">AI Weekly</a> - News curatées</li>
                         </ul>
                     </div>
+                    <div class="resource-category">
+                        <h4>📧 Newsletters Françaises</h4>
+                        <ul>
+                            <li><a href="https://www.semainetech.fr" target="_blank">La Semaine Tech</a> - Récapitulatif tech hebdo</li>
+                            <li><a href="https://www.substack.com/redirect/15ee0951-4c73-4fbc-8ceb-8a50c36a6e20" target="_blank">Tech & Société</a> - Enjeux tech français</li>
+                            <li><a href="https://www.lettre-a-lci.fr" target="_blank">La Lettre LCI Tech</a> - Innovation et startup</li>
+                            <li><a href="https://www.netpublic.fr" target="_blank">NetPublic</a> - Ressources numériques publiques</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <!-- Conclusion -->
-            <div class="veille-conclusion">
-                <h3>💡 Mon Avis</h3>
+            <!-- ===== SECTION 9 : LES IA POPULAIRES ===== -->
+            <div class=\"veille-section\">
+                <h3>🧠 Les IA Populaires du Vibe Coding</h3>
+                <div class="ia-cards-grid">
+                    <div class="ia-card-base ia-card-chatgpt">
+                        <h4>🎯 ChatGPT (OpenAI)</h4>
+                        <ul>
+                            <li>Le plus polyvalent pour explications & refactoring</li>
+                            <li>Version 4 Turbo extrêmement performante</li>
+                            <li>Meilleur pour les prompt longs et complexes</li>
+                            <li>Coût : Modéré à élevé</li>
+                        </ul>
+                    </div>
+                    <div class="ia-card-base ia-card-claude">
+                        <h4>⚡ Claude (Anthropic)</h4>
+                        <ul>
+                            <li>Meilleur en sécurité et éthique</li>
+                            <li>Fenêtre contexte massive (100k tokens)</li>
+                            <li>Excellent pour les projets sensibles</li>
+                            <li>Coût : Modéré</li>
+                        </ul>
+                    </div>
+                    <div class="ia-card-base ia-card-grok">
+                        <h4>🔥 Grok-2 (xAI)</h4>
+                        <ul>
+                            <li>Raisonnement complexe et multi-étapes</li>
+                            <li>Excellente performance en mathématiques</li>
+                            <li>Idéal pour les algorithmes complexes</li>
+                            <li>Coût : Compétitif</li>
+                        </ul>
+                    </div>
+                    <div class="ia-card-base ia-card-ollama">
+                        <h4>🎆 Ollama / Open Source</h4>
+                        <ul>
+                            <li>Llama 2, Mistral, CodeLlama</li>
+                            <li>Exécution locale, 100% privé</li>
+                            <li>Parfait pour les projets confidentiels</li>
+                            <li>Coût : Gratuit (hardware)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== SECTION 10 : BONNES PRATIQUES ===== -->
+            <div class=\"veille-section\">
+                <h3>✔️ Bonnes Pratiques du Vibe Coding</h3>
+                <div class="practices-grid">
+                    <div class="practices-do">
+                        <h4>✅ À Faire</h4>
+                        <ul>
+                            <li>✓ Toujours lire et comprendre le code généré</li>
+                            <li>✓ Vérifier la sécurité et les vulnérabilités</li>
+                            <li>✓ Tester le code avant production</li>
+                            <li>✓ Documenter les décisions architecturales</li>
+                            <li>✓ Maintenir des standards de qualité élevés</li>
+                            <li>✓ Utiliser le Git pour tracer les modifications</li>
+                        </ul>
+                    </div>
+                    <div class="practices-dont">
+                        <h4>❌ À Éviter</h4>
+                        <ul>
+                            <li>✗ Copier-coller sans vérification</li>
+                            <li>✗ Ignorer les warnings ou erreurs de linting</li>
+                            <li>✗ Négliger les tests unitaires</li>
+                            <li>✗ Faire confiance aveuglément à l'IA</li>
+                            <li>✗ Oublier la documentation</li>
+                            <li>✗ Négliger la performance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== SECTION 11 : CAS D'USAGE CONCRETS ===== -->
+            <div class=\"veille-section\">
+                <h3>🎯 Cas d'Usage Concrets du Vibe Coding</h3>
+                <div class="use-cases-wrapper">
+                    <div class="use-cases-grid">
+                        <div class="use-case-item use-case-devstack">
+                            <h4>💻 Développement Fullstack</h4>
+                            <p>Générer rapidement des CRUD, API REST, interfaces React/Vue</p>
+                        </div>
+                        <div style=\"border-left: 4px solid #f5576c; padding-left: 15px;\">
+                            <h4 style=\"color: #f5576c;\">🐛 Debugging</h4>
+                            <p>Identifier et corriger les bugs, analyser les stack traces</p>
+                        </div>
+                        <div style=\"border-left: 4px solid #4facfe; padding-left: 15px;\">
+                            <h4 style=\"color: #4facfe;\">📚 Documentation</h4>
+                            <p>Générer README, commentaires de code, docs techniques</p>
+                        </div>
+                        <div style=\"border-left: 4px solid #22c55e; padding-left: 15px;\">
+                            <h4 style=\"color: #22c55e;\">🔄 Refactoring</h4>
+                            <p>Améliorer la structure, optimiser les performances</p>
+                        </div>
+                        <div style=\"border-left: 4px solid #f59e0b; padding-left: 15px;\">
+                            <h4 style=\"color: #f59e0b;\">🧪 Tests</h4>
+                            <p>Écrire des tests unitaires, tests d'intégration automatiquement</p>
+                        </div>
+                        <div style=\"border-left: 4px solid #8b5cf6; padding-left: 15px;\">
+                            <h4 style=\"color: #8b5cf6;\">🚀 DevOps</h4>
+                            <p>Générer Dockerfiles, pipelines CI/CD, configurations cloud</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== SECTION 12 : MES APPRENTISSAGES ===== -->
+            <div class="veille-section">
+                <h3>💡 Mes Apprentissages Clés</h3>
+                <div style="background: rgba(34, 197, 94, 0.1); padding: 20px; border-radius: 10px; border-left: 4px solid #22c55e;">
+                    <ul>
+                        <li>L'IA génère du code, mais <strong>je dois le valider</strong> architecturalement</li>
+                        <li>Le "Prompt Engineering" est une compétence essentielle aujourd'hui</li>
+                        <li>Les fondamentaux (algo, structure de données) restent primordiaux</li>
+                        <li>L'IA excelle sur les tâches répétitives et la génération de boilerplate</li>
+                        <li>La sécurité doit toujours être vérifiée manuellement</li>
+                        <li>La collaboration humain-IA sera la norme du développement en 2027</li>
+                        <li>Chaque IA a ses forces : les combiner augmente la productivité</li>
+                        <li>Le contexte et la clarté des prompts sont cruciaux</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ===== SECTION 13 : CONCLUSION FINALE ===== -->
+            <div class=\"veille-conclusion\">
+                <h3>🎯 Conclusion : L'Ère du Vibe Coding</h3>
                 <p>
-                    Le "Vibe Coding" est une <strong>évolution</strong>, pas une menace. L'IA est mon outil, pas mon remplaçant. 
-                    L'important : rester curieux, maintenir mes fondamentaux techniques, et apprendre à collaborer efficacement avec les agents IA. 
-                    Ceux qui embrassent cette ère et restent rigoureux seront les leaders de demain.
+                    Le <strong>Vibe Coding</strong> n'est pas une tendance, c'est une <strong>transformation structurelle</strong> du métier de développeur. 
+                    Nous passons d'une ère de codage manuel à une ère de <strong>collaboration intelligente</strong>.
+                </p>
+                <div style=\"background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%); padding: 20px; border-radius: 10px; margin-top: 15px; border: 2px solid #8b5cf6;\">
+                    <p><strong>🔮 La Réalité en 2026 :</strong></p>
+                    <ul>
+                        <li>92% des développeurs utilisent une IA, qu'ils le reconnaissent ou non</li>
+                        <li>Les \"10X developers\" ne sont plus ceux qui codent vite, mais ceux qui orchestrent les IA efficacement</li>
+                        <li>Les postes juniors évoluent : moins \"coder une fonction\", plus \"diriger une IA pour la coder\"</li>
+                        <li>L'industrie valorise maintenant : architecture > codage brut</li>
+                    </ul>
+                </div>
+                <p style=\"margin-top: 15px;\">
+                    <strong>Mon Engagement :</strong> Je ne vois pas l'IA comme un remplacement, mais comme une <strong>augmentation de mes capacités</strong>. 
+                    Je maîtrise les fondamentaux, je comprends l'architecture, et j'utilise les outils modernes pour <strong>livrer plus de valeur, plus vite</strong>.
+                    <br><br>
+                    <strong>Le code généré par une IA est aussi bon que l'architecte qui la guide.</strong> C'est ça, le Vibe Coding.
+                </p>
+                <p style=\"margin-top: 15px; font-style: italic; color: #666;\">
+                    Les développeurs qui embrassent cette évolution et maintiennent leur rigueur seront les leaders technologiques de demain. 
+                    Ceux qui la craignent risquent de rester sur le bas-côté de la route. - Valentin HERNU, 2026
                 </p>
             </div>
         </section>
 
 
                 <!-- Chronologie : Passé, Présent, Futur -->
-                <div class="timeline-section">
+                <div style="display: none;">
                     <h3 class="veille-subtitle-h3">📅 Évolution du code assisté par IA</h3>
-                    
-                    <div class="veille-timeline">
-                        <div class="veille-timeline-item past">
-                            <div class="veille-timeline-marker">
-                                <span class="veille-timeline-icon">🕰️</span>
-                            </div>
-                            <div class="veille-timeline-content">
-                                <h4>Le Passé (Avant 2023)</h4>
-                                <p><strong>L'ère du développement manuel :</strong></p>
-                                <ul>
-                                    <li>Google Autocomplete et IntelliSense basiques</li>
-                                    <li>Premiers assistants de code (Tabnine, Kite)</li>
-                                    <li>Stack Overflow et les forums comme única ressource</li>
-                                    <li>Le développeur = la principale "IA" du projet</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="veille-timeline-item present">
-                            <div class="veille-timeline-marker">
-                                <span class="veille-timeline-icon">⚡</span>
-                            </div>
-                            <div class="veille-timeline-content">
-                                <h4>Le Présent (2023-2026)</h4>
-                                <p><strong>La révolution des LLM :</strong></p>
-                                <ul>
+                </div>
                                     <li>ChatGPT, Claude, GitHub Copilot X génèrent des blocs complets</li>
                                     <li>Agents IA semi-autonomes (Cursor, Devin)</li>
                                     <li>Capacité à refactoriser, déboguer et tester automatiquement</li>

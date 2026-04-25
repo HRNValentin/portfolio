@@ -1,3 +1,31 @@
+// ===== GESTION DU MENU HAMBURGER (MOBILE) =====
+const hamburger = document.getElementById('hamburger');
+const sidebar = document.querySelector('.sidebar');
+const navLinks = document.querySelectorAll('.nav-links li a');
+
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+    
+    // Fermer le menu quand on clique sur un lien
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            hamburger.classList.remove('active');
+        });
+    });
+    
+    // Fermer le menu quand on clique en dehors
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.sidebar') && !e.target.closest('.hamburger')) {
+            sidebar.classList.remove('active');
+            hamburger.classList.remove('active');
+        }
+    });
+}
+
 // ===== DONNÉES DES PROJETS =====
 const projects = [
     {
@@ -226,11 +254,13 @@ function openProjectModal(projectId) {
     displayProject(currentProjectIndex);
     document.getElementById('projectModal').classList.add('active');
     document.body.style.overflow = 'hidden';
+    document.querySelector('.sidebar').style.display = 'none';
 }
 
 function closeProjectModal() {
     document.getElementById('projectModal').classList.remove('active');
     document.body.style.overflow = 'auto';
+    document.querySelector('.sidebar').style.display = 'block';
 }
 
 function displayProject(index) {
@@ -426,21 +456,32 @@ window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-links li a');
     let current = "";
-    let minDist = Infinity;
-    const scrollPos = window.scrollY || window.pageYOffset;
+    const scrollPos = window.scrollY + 100; // Point de détection (réduit)
 
-    sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        const dist = Math.abs(scrollPos - sectionTop);
-        if (dist < minDist) {
-            minDist = dist;
-            current = section.getAttribute("id");
+    // Chercher la section qui contient le point de détection
+    for (let i = 0; i < sections.length; i++) {
+        const sectionTop = sections[i].offsetTop;
+        const sectionBottom = sectionTop + sections[i].offsetHeight;
+        
+        if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+            current = sections[i].getAttribute("id");
+            break;
         }
-    });
+    }
+    
+    // Si aucune section ne contient le point, prendre la section la plus proche en dessous
+    if (!current) {
+        for (let i = sections.length - 1; i >= 0; i--) {
+            if (scrollPos >= sections[i].offsetTop) {
+                current = sections[i].getAttribute("id");
+                break;
+            }
+        }
+    }
 
     navLinks.forEach((link) => {
         link.classList.remove("active");
-        if (link.getAttribute("href").includes(current)) {
+        if (current && link.getAttribute("href") === "#" + current) {
             link.classList.add("active");
         }
     });
