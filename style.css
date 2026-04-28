@@ -2055,6 +2055,262 @@ h1 {
     transform: scale(0.98);
 }
 
+/* --- 13. FORMATIONS SECTION --- */
+#formations {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
+}
+
+.formations-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.formation-category {
+    animation: slideInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.formation-category-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.formation-category-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+/* Mes Formations (Grid style) */
+.formations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.formation-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    cursor: pointer;
+    opacity: 0;
+    animation: scaleInCard 0.6s ease-out forwards;
+}
+
+.formation-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.formation-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.formation-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.formation-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.25);
+}
+
+.formation-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+.formation-card:nth-child(2) .formation-icon {
+    animation-delay: 0.5s;
+}
+
+.formation-card:nth-child(3) .formation-icon {
+    animation-delay: 1s;
+}
+
+.formation-card h4 {
+    font-size: 1.4rem;
+    color: #0f172a;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.formation-card p {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Formations Utiles (Link style) */
+.useful-formations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.useful-formation-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.25);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    cursor: pointer;
+    opacity: 0;
+    animation: scaleInCard 0.6s ease-out forwards;
+    position: relative;
+    overflow: hidden;
+}
+
+.useful-formation-card:nth-child(1) {
+    animation-delay: 0.4s;
+}
+
+.useful-formation-card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.useful-formation-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.useful-formation-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.4s ease;
+}
+
+.useful-formation-card:hover::before {
+    left: 100%;
+}
+
+.useful-formation-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.45);
+}
+
+.useful-formation-icon {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    display: inline-block;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.useful-formation-card:nth-child(2) .useful-formation-icon {
+    animation-delay: 0.4s;
+}
+
+.useful-formation-card:nth-child(3) .useful-formation-icon {
+    animation-delay: 0.8s;
+}
+
+.useful-formation-card h4 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.useful-formation-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    opacity: 0.95;
+}
+
+.external-icon {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.useful-formation-card:hover .external-icon {
+    transform: rotate(45deg) scale(1.2);
+}
+
+/* Animations formations */
+@keyframes scaleInCard {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Responsive formations */
+@media (max-width: 768px) {
+    .formations-grid,
+    .useful-formations-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .formation-category-title {
+        font-size: 1.4rem;
+    }
+    
+    .formations-wrapper {
+        gap: 40px;
+    }
+    
+    .formation-card,
+    .useful-formation-card {
+        padding: 25px;
+    }
+    
+    .formation-icon {
+        font-size: 2.5rem;
+    }
+    
+    .useful-formation-icon {
+        font-size: 2.3rem;
+    }
+}
+
 /* --- 13. SECTION SCREENSHOTS --- */
 .modal-screenshots-section {
     width: 100%;
@@ -2317,8 +2573,6 @@ h1 {
 .map-container {
     width: 100%;
     border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     min-height: 400px;
 }
 
@@ -2755,7 +3009,7 @@ h1 {
 
 .ia-card-claude ul {
     font-size: 0.9em;
-    color: #333;
+    color: #DDDDDD;
 }
 
 .ia-card-grok {
@@ -2769,7 +3023,7 @@ h1 {
 
 .ia-card-grok ul {
     font-size: 0.9em;
-    color: #333;
+    color: #DDDDDD;
 }
 
 .ia-card-ollama {
@@ -2783,7 +3037,7 @@ h1 {
 
 .ia-card-ollama ul {
     font-size: 0.9em;
-    color: #333;
+    color: #DDDDDD;
 }
 
 .ia-card-base h4 {

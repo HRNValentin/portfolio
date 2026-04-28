@@ -59,6 +59,7 @@ try {
             <li><a href="#parcours">À propos de moi</a></li>
             <li><a href="#specialisations">Spécialisations</a></li>
             <li><a href="#projets">Projets SLAM</a></li>
+            <li><a href="#formations">Formations</a></li>
             <li><a href="#veille">Veille Technologique</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -289,7 +290,7 @@ try {
                     </div>
                     <div class="project-card" data-project-id="1">
                         <div class="project-card-image">
-                            <img src="img/dev-illustre.png" alt="Galaxy Swiss Bourdin">
+                            <img src="img/gsb.jpg" alt="Galaxy Swiss Bourdin">
                         </div>
                         <div class="project-card-content">
                             <h3>Galaxy Swiss Bourdin</h3>
@@ -300,7 +301,7 @@ try {
                     </div>
                     <div class="project-card" data-project-id="2">
                         <div class="project-card-image">
-                            <img src="img/dev-illustre.png" alt="Amicale du Val de Somme">
+                            <img src="img/avs.jpg" alt="Amicale du Val de Somme">
                         </div>
                         <div class="project-card-content">
                             <h3>Amicale du Val de Somme</h3>
@@ -311,7 +312,7 @@ try {
                     </div>
                     <div class="project-card" data-project-id="3">
                         <div class="project-card-image">
-                            <img src="img/dev-illustre.png" alt="Moodle">
+                            <img src="img/moodle.png" alt="Moodle">
                         </div>
                         <div class="project-card-content">
                             <h3>Moodle</h3>
@@ -322,13 +323,67 @@ try {
                     </div>
                     <div class="project-card" data-project-id="4">
                         <div class="project-card-image">
-                            <img src="img/dev-illustre.png" alt="Jackobylette">
+                            <img src="img/jackobylette.png" alt="Jackobylette">
                         </div>
                         <div class="project-card-content">
-                            <h3>Jackobylette</h3>
+                            <h3>Jackobylette en cours de création</h3>
                             <p class="project-tagline">La liberté sur deux roues</p>
                             <p>Plateforme de location de mobylettes avec réservations et paiements sécurisés.</p>
                             <div class="tags"><span>PHP</span><span>MySQL</span><span>Paiement</span><span>Réservation</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION FORMATIONS -->
+            <section id="formations" class="section-container full-page">
+                <h2 class="section-title">Formations 📚</h2>
+                
+                <div class="formations-wrapper">
+                    <!-- Mes formations -->
+                    <div class="formation-category">
+                        <h3 class="formation-category-title">Mes Formations</h3>
+                        <div class="formations-grid">
+                            <div class="formation-card">
+                                <div class="formation-icon">🎓</div>
+                                <h4>OpenClassroom</h4>
+                                <p>Plateforme d'apprentissage en ligne avec cours complets</p>
+                            </div>
+                            <div class="formation-card">
+                                <div class="formation-icon">🎬</div>
+                                <h4>Grafikart</h4>
+                                <p>Tutos vidéos de qualité professionnelle</p>
+                            </div>
+                            <div class="formation-card">
+                                <div class="formation-icon">🚀</div>
+                                <h4>PassTonHack</h4>
+                                <p>Challenges et projets pratiques</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formations utiles -->
+                    <div class="formation-category">
+                        <h3 class="formation-category-title">Formations Utiles</h3>
+                        <div class="useful-formations-grid">
+                            <a href="https://blog.stephane-robert.info/docs/developper/version/git/" target="_blank" rel="noopener noreferrer" class="useful-formation-card">
+                                <div class="useful-formation-icon">🌳</div>
+                                <h4>Git</h4>
+                                <p>Gestion de versions & collaboration</p>
+                                <span class="external-icon"><i data-lucide="external-link" style="width: 16px; height: 16px;"></i></span>
+                            </a>
+                            <a href="https://blog.stephane-robert.info/docs/developper/api-rest/" target="_blank" rel="noopener noreferrer" class="useful-formation-card">
+                                <div class="useful-formation-icon">🔗</div>
+                                <h4>API REST</h4>
+                                <p>Créer et consommer des API modernes</p>
+                                <span class="external-icon"><i data-lucide="external-link" style="width: 16px; height: 16px;"></i></span>
+                            </a>
+                            <a href="https://blog.stephane-robert.info/docs/" target="_blank" rel="noopener noreferrer" class="useful-formation-card">
+                                <div class="useful-formation-icon">⚙️</div>
+                                <h4>DevOps</h4>
+                                <p>Déploiement, CI/CD et infrastructure</p>
+                                <span class="external-icon"><i data-lucide="external-link" style="width: 16px; height: 16px;"></i></span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -557,9 +612,9 @@ try {
                         <a href="https://www.youtube.com/@Grafikart" target="_blank">→ Chaîne</a>
                     </div>
                     <div class="creator-card">
-                        <h4>Tech Me Out</h4>
-                        <p>Analyses et tendances tech, IA et startups françaises</p>
-                        <a href="https://www.youtube.com/@TechMeOut" target="_blank">→ Chaîne</a>
+                        <h4>Ludovic Salenne</h4>
+                        <p>Tutoriels IA, outils, automatisation</p>
+                        <a href="https://www.youtube.com/@LudovicSalenne" target="_blank">→ Chaîne</a>
                     </div>
                 </div>
             </div>
@@ -599,7 +654,7 @@ try {
                     <div class="resource-category">
                         <h4>📧 Newsletters Internationales</h4>
                         <ul>
-                            <li><a href="https://newsletter.deeplearning.ai/" target="_blank">DeepLearning.AI</a> - IA & ML</li>
+                            <li><a href="https://www.deeplearning.ai/" target="_blank">DeepLearning.AI</a> - IA & ML</li>
                             <li><a href="https://importai.substack.com" target="_blank">Import AI</a> - Digest IA générative</li>
                             <li><a href="https://tldr.tech" target="_blank">TLDR Tech</a> - Tech quotidienne</li>
                             <li><a href="https://aiweekly.co" target="_blank">AI Weekly</a> - News curatées</li>
@@ -608,9 +663,9 @@ try {
                     <div class="resource-category">
                         <h4>📧 Newsletters Françaises</h4>
                         <ul>
-                            <li><a href="https://www.semainetech.fr" target="_blank">La Semaine Tech</a> - Récapitulatif tech hebdo</li>
+                            <li><a href="https://next.ink/category/ia-et-algorithmes/" target="_blank">NEXT</a> - IA & Algo </li>
                             <li><a href="https://www.substack.com/redirect/15ee0951-4c73-4fbc-8ceb-8a50c36a6e20" target="_blank">Tech & Société</a> - Enjeux tech français</li>
-                            <li><a href="https://www.lettre-a-lci.fr" target="_blank">La Lettre LCI Tech</a> - Innovation et startup</li>
+                            <li><a href="https://www.ijustvibecodedthis.com/" target="_blank">ijustvibecodedthis</a> - codage IA</li>
                             <li><a href="https://www.netpublic.fr" target="_blank">NetPublic</a> - Ressources numériques publiques</li>
                         </ul>
                     </div>
@@ -768,38 +823,6 @@ try {
             </div>
         </section>
 
-
-                <!-- Chronologie : Passé, Présent, Futur -->
-                <div style="display: none;">
-                    <h3 class="veille-subtitle-h3">📅 Évolution du code assisté par IA</h3>
-                </div>
-                                    <li>ChatGPT, Claude, GitHub Copilot X génèrent des blocs complets</li>
-                                    <li>Agents IA semi-autonomes (Cursor, Devin)</li>
-                                    <li>Capacité à refactoriser, déboguer et tester automatiquement</li>
-                                    <li>Premières expériences de "pair programming IA"</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="veille-timeline-item future">
-                            <div class="veille-timeline-marker">
-                                <span class="veille-timeline-icon">🚀</span>
-                            </div>
-                            <div class="veille-timeline-content">
-                                <h4>Le Futur (2026+)</h4>
-                                <p><strong>La maturation des agents autonomes :</strong></p>
-                                <ul>
-                                    <li>Agents IA complètement autonomes pour projets complets</li>
-                                    <li>Zéro tâche manuelle, juste des spécifications</li>
-                                    <li>Intégration totale avec DevOps, test, déploiement</li>
-                                    <li>Le rôle du dev : architecte et validateur, pas codeur</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
         <section id="contact" class="section-container full-page">
             <span class="badge">Contact</span>
             <h2 class="section-title">Me contacter</h2>
@@ -836,7 +859,7 @@ try {
                     <a href="https://github.com/HRNValentin" target="_blank" rel="noopener noreferrer" class="social-link github">
                         <span>GitHub</span>
                     </a>
-                    <a href="https://linkedin.com/in/valentinhernu" target="_blank" rel="noopener noreferrer" class="social-link linkedin">
+                    <a href="https://www.linkedin.com/in/valentin-hernu-659971406/" target="_blank" rel="noopener noreferrer" class="social-link linkedin">
                         <span>LinkedIn</span>
                     </a>
                 </div>

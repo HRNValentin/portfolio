@@ -54,19 +54,19 @@ const projects = [
         `,
         tags: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "Admin Panel"],
         screenshots: {
-            "Code PHP": ["img/dev-illustre.png", "img/dev-illustre.png"],
-            "Base de Données": ["img/dev-illustre.png"],
-            "Interface": ["img/dev-illustre.png", "img/dev-illustre.png"]
+            "Panel de connexion admin": ["img/adminportfolioconnexion", "img/error.jpg"],
+            "Admin": ["img/adminportfolio.jpg"],
+            "Base de données": ["img/portfoliodb.jpg"]
         }
     },
     {
         id: 1,
         title: "Galaxy Swiss Bourdin",
         tagline: "Simplifiez vos notes de frais",
-        illustration: "img/dev-illustre.png",
+        illustration: "img/gsb.jpg",
         description: "Application de gestion des frais destinée aux visiteurs médicaux permettant une traçabilité complète des dépenses.",
-        image: "img/dev-illustre.png",
-        images: ["img/dev-illustre.png"],
+        image: "img/gsb.jpg",
+        images: ["img/gsb.jpg"],
         details: `
             <strong>Objectif :</strong> Développer un système de gestion des notes de frais pour les visiteurs médicaux de l'entreprise Galaxy Swiss Bourdin avec workflow de validation.
             
@@ -91,20 +91,20 @@ const projects = [
         `,
         tags: ["PHP", "MySQL", "Gestion", "Workflow", "Dashboard", "Admin"],
         screenshots: {
-            "Authentification": ["img/dev-illustre.png"],
-            "Dashboard": ["img/dev-illustre.png", "img/dev-illustre.png"],
-            "Saisie Frais": ["img/dev-illustre.png"],
-            "Base de Données": ["img/dev-illustre.png"]
+            "Authentification": ["img/gsbconnexion.jpg"],
+            "Dashboard": ["img/gsbdashboard.jpg"],
+            "Saisie Frais": ["img/exemple.jpg"],
+            "Base de Données": ["img/gsbdb.jpg"]
         }
     },
     {
         id: 2,
         title: "Amicale du Val de Somme",
         tagline: "Coureurs réunis, victoires célébrées",
-        illustration: "img/dev-illustre.png",
+        illustration: "img/avs.jpg",
         description: "Plateforme complète pour la gestion des courses à pied avec application mobile et interface web.",
-        image: "img/dev-illustre.png",
-        images: ["img/dev-illustre.png"],
+        image: "img/avs.jpg",
+        images: ["img/avs.jpg"],
         details: `
             <strong>Objectif :</strong> Créer un écosystème digital complet pour faciliter l'organisation et la participation aux courses à pied de la région Amicale du Val de Somme.
             
@@ -131,20 +131,20 @@ const projects = [
         `,
         tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "API REST", "Mobile", "Responsive"],
         screenshots: {
-            "API REST": ["img/dev-illustre.png"],
-            "Interface Mobile": ["img/dev-illustre.png", "img/dev-illustre.png"],
-            "Admin Panel": ["img/dev-illustre.png"],
-            "Base de Données": ["img/dev-illustre.png"]
+            "Interface": ["img/vdsinterface.jpg"],
+            "Interface Mobile": ["img/vdsinterfacemobile.jpg"],
+            "Admin Panel": ["img/vdsadmin.jpg"],
+            "Base de Données": ["img/vdsdb.jpg"]
         }
     },
     {
         id: 3,
         title: "Moodle",
         tagline: "L'apprentissage, partout et toujours",
-        illustration: "img/dev-illustre.png",
-        description: "Plateforme d'apprentissage en ligne (LMS) complète pour la gestion de cours, quiz, forums et suivi des étudiants.",
-        image: "img/dev-illustre.png",
-        images: ["img/dev-illustre.png"],
+        illustration: "img/moodle.png",
+        description: "Plateforme d'apprentissage en ligne (LMS) complète pour la gestion de cours, forums et suivi des employées et/ou étudiants.",
+        image: "img/moodle.png",
+        images: ["img/moodle.png"],
         details: `
             <strong>Objectif :</strong> Développer une plateforme d'apprentissage en ligne robuste et flexible pour l'enseignement à distance et l'accompagnement pédagogique.
             
@@ -153,7 +153,6 @@ const projects = [
             • Participation aux quiz et activités interactives
             • Remise des devoirs et travaux
             • Communication avec les enseignants via forums
-            • Suivi de la progression et des notes
             • Téléchargement des ressources
             
             <strong>Fonctionnalités pour les enseignants :</strong>
@@ -180,21 +179,20 @@ const projects = [
         `,
         tags: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "LMS", "E-learning", "Admin"],
         screenshots: {
-            "Interface Cours": ["img/dev-illustre.png", "img/dev-illustre.png"],
-            "Création Quiz": ["img/dev-illustre.png"],
-            "Gestion Participants": ["img/dev-illustre.png"],
-            "Forum & Messages": ["img/dev-illustre.png"],
-            "Base de Données": ["img/dev-illustre.png"]
+            "Interface Cours": ["img/cours.jpg", "img/video.jpg"],
+            "Panel de connexion": ["img/seconnecter.jpg"],
+            "Administration": ["img/Administration.jpg"],
+            "Base de Données": ["img/moodledb.jpg"]
         }
     },
     {
         id: 4,
-        title: "Jackobylette",
+        title: "Jackobylette en cours de création",
         tagline: "La liberté sur deux roues",
-        illustration: "img/dev-illustre.png",
-        description: "Plateforme complète de location de mobylettes avec gestion des réservations, paiements et suivi des véhicules.",
-        image: "img/dev-illustre.png",
-        images: ["img/dev-illustre.png"],
+        illustration: "img/jackobylette.png",
+        description: "Plateforme complète de location de mobylettes avec gestion des réservations et paiements.",
+        image: "img/jackobylette.png",
+        images: ["img/jackobylette.png"],
         details: `
             <strong>Objectif :</strong> Créer une plateforme de location de mobylettes moderne et intuitive permettant aux utilisateurs de réserver des véhicules facilement et aux administrateurs de gérer efficacement leur flotte.
             
@@ -237,11 +235,10 @@ const projects = [
         `,
         tags: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "Paiement", "Réservation", "Gestion"],
         screenshots: {
-            "Catalogue Mobylettes": ["img/dev-illustre.png", "img/dev-illustre.png"],
-            "Reservation": ["img/dev-illustre.png"],
-            "Dashboard Client": ["img/dev-illustre.png"],
-            "Panel Admin": ["img/dev-illustre.png"],
-            "Paiement & Factures": ["img/dev-illustre.png"]
+            "Catalogue Mobylettes": ["img/catalogue.jpg"],
+            "Reservation": ["img/reservation.jpg"],
+            "Dashboard Client": ["img/dashboard-client.jpg"],
+            "Panel Admin": ["img/panel-admin.jpg"],
         }
     }
 ];
@@ -493,6 +490,31 @@ if (btnContact) {
     btnContact.addEventListener('click', function() {
         document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
     });
+}
+
+// ===== ANIMATIONS FORMATIONS (On Scroll) =====
+function observeFormations() {
+    const formationCategory = document.querySelectorAll('.formation-category');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    formationCategory.forEach(category => {
+        observer.observe(category);
+    });
+}
+
+// Lancer l'observation des formations au chargement
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', observeFormations);
+} else {
+    observeFormations();
 }
 
 // ===== GESTION DE LA MODALE CV =====
